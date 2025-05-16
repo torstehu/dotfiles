@@ -1,0 +1,16 @@
+[user]
+  email = {{ .email }}
+  name = {{ .name }}
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    diff = diff | bat --color=always
+    log = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim white)(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
+
+[core]
+    pager = bat --color=always --plain --paging=never
